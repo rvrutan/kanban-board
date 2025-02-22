@@ -51,9 +51,7 @@ A fully interactive and responsive Kanban Board for project management. Built wi
 
 The application is deployed at:
 
-Kanban Board - Live Site
-
-	The live site link will be added once the project is deployed.
+[Kanban Board - Live Site](https://kanban-board-server-27vq.onrender.com)
 
 ## Screenshots
 
