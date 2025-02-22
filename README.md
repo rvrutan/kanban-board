@@ -4,8 +4,8 @@ A fully interactive and responsive Kanban Board for project management. Built wi
 
 ## Table of Contents
 
--[Features] (#features)
-2.	[Tech Stack] (#Tech Stack)
+	[Features] (#features)
+	[Tech Stack] (#Tech Stack)
 3.	[Usage] (#Usage)
 4.	[API Endpoints] (#API Endpoints)
 5.	[Screenshots] (#Screenshots)
