@@ -29,7 +29,15 @@ A fully interactive and responsive Kanban Board for project management. Built wi
 	•	Authentication: JSON Web Token (JWT)
 	•	Other Tools: React Router, Axios
 
-## Usage
+
+## API Endpoints
+	•	GET /tickets: Retrieve all tickets.
+	•	POST /tickets: Create a new ticket.
+	•	PUT /tickets/:id: Update an existing ticket.
+	•	DELETE /tickets/:id: Delete a ticket.
+	•	GET /users: Retrieve all users (to assign tickets).
+
+ ## Usage
 1. Login:
 	•	Users must log in to create, view, and manage tickets.
 2.	Create Tickets:
@@ -39,12 +47,6 @@ A fully interactive and responsive Kanban Board for project management. Built wi
 4.	Edit/Delete Tickets:
 	•	Edit a ticket by clicking the “Edit” button or delete it using the “Delete” button.
 
-## API Endpoints
-	•	GET /tickets: Retrieve all tickets.
-	•	POST /tickets: Create a new ticket.
-	•	PUT /tickets/:id: Update an existing ticket.
-	•	DELETE /tickets/:id: Delete a ticket.
-	•	GET /users: Retrieve all users (to assign tickets).
   
 ## Deployed Application
 
