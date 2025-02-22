@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-
 import { TicketData } from '../interfaces/TicketData';
 import { ApiMessage } from '../interfaces/ApiMessage';
 import { MouseEventHandler } from 'react';
@@ -10,7 +9,6 @@ interface TicketCardProps {
 }
 
 const TicketCard = ({ ticket, deleteTicket }: TicketCardProps) => {
-
   const handleDelete: MouseEventHandler<HTMLButtonElement> = async (event) => {
     const ticketId = Number(event.currentTarget.value);
     if (!isNaN(ticketId)) {
@@ -24,12 +22,14 @@ const TicketCard = ({ ticket, deleteTicket }: TicketCardProps) => {
   };
 
   return (
-    <div className='ticket-card'>
-      <h3>{ticket.name}</h3>
+    <div className='ticket-card card shadow-lg bg-white p-4'>
+      <h3 className='text-lg font-bold'>{ticket.name}</h3>
       <p>{ticket.description}</p>
       <p>{ticket.assignedUser?.username}</p>
-      <Link to='/edit' state={{id: ticket.id}} type='button' className='editBtn'>Edit</Link>
-      <button type='button' value={String(ticket.id)} onClick={handleDelete} className='deleteBtn'>Delete</button>
+      <div className='flex space-x-4 mt-2'>
+        <Link to='/edit' state={{ id: ticket.id }} className='btn btn-sm'>Edit</Link>
+        <button className='btn btn-sm btn-error' value={String(ticket.id)} onClick={handleDelete}>Delete</button>
+      </div>
     </div>
   );
 };
