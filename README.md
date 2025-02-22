@@ -3,15 +3,14 @@
 A fully interactive and responsive Kanban Board for project management. Built with React, TypeScript, and DaisyUI, this app allows users to create, edit, delete, and move tasks (tickets) across multiple swimlanes such as “Todo”, “In Progress”, and “Done”. It includes user authentication, ensuring secure access and personalized ticket assignment.
 
 ## Table of Contents
-
-	[Features] (#features)
-	[Tech Stack] (#Tech Stack)
-3.	[Usage] (#Usage)
-4.	[API Endpoints] (#API Endpoints)
-5.	[Screenshots] (#Screenshots)
-6.	[Deployed Application] (#Deployed Application)
-7.	[Future Enhancements] (#Future Enhancements)
-8.	[Contributing] (#Contributing)
+1.	[Features](#features)
+2.	[Tech Stack](#tech-stack)
+3.	[Usage](#usage)
+4.	[API Endpoints](#api-endpoints)
+5.	[Screenshots](#screenshots)
+6.	[Deployed Application](#deployed-application)
+7.	[Future Enhancements](#future-enhancements)
+8.	[Contributing](#contributing)
 
 ## Features
 	•	User authentication and secure access.
@@ -76,5 +75,5 @@ Contributions are welcome! Please follow these steps to contribute:
 ### Questions
 
 Contact me for any further questions;
-- Github: [github.com/rvrutan]
+- Github: [github.com/rvrutan](https://github.com/rvrutan)
 - Email: [rutanroni@gmail.com](mailtorutanroni@gmail.com)
