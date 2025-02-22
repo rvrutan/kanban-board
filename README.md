@@ -76,5 +76,5 @@ Contributions are welcome! Please follow these steps to contribute:
 ### Questions
 
 Contact me for any further questions;
-- Github: [https://github.com/rvrutan] (https://github.com/rvrutan)
+- Github: [https://github.com/rvrutan]
 - Email: [rutanroni@gmail.com](mailtorutanroni@gmail.com)
