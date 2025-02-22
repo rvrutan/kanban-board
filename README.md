@@ -54,6 +54,9 @@ The application is deployed at:
 [Kanban Board - Live Site](https://kanban-board-server-27vq.onrender.com)
 
 ## Screenshots
+![Kanban-Board Main](https://github.com/user-attachments/assets/5ca47a8b-f093-402e-b5be-0eae63c5bf5f)
+![Kanban-Board Login](https://github.com/user-attachments/assets/9c6b2880-2c81-4789-a924-1083ac489bc2)
+![Kanban-Board Edit](https://github.com/user-attachments/assets/92b9ee8c-5119-4b5d-aadd-8f96deca7ac2)
 
 ### Future Enhancements
 - Drag-and-Drop Functionality: Enable users to drag and drop tickets between swimlanes.
