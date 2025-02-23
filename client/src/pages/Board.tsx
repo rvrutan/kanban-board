@@ -70,9 +70,7 @@ const Board = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {boardStates.map((status) => {
-              const filteredTickets = tickets.filter(
-                (ticket) => ticket.status === status
-              );
+              const filteredTickets = tickets.filter(ticket => ticket.status === status);
               return (
                 <Swimlane
                   title={status}

@@ -1,18 +1,18 @@
-import { useState, useEffect, FormEvent, ChangeEvent } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { createTicket } from '../api/ticketAPI';
-import { TicketData } from '../interfaces/TicketData';
-import { UserData } from '../interfaces/UserData';
-import { retrieveUsers } from '../api/userAPI';
+import { useState, useEffect, FormEvent, ChangeEvent } from "react";
+import { useNavigate } from "react-router-dom";
+import { createTicket } from "../api/ticketAPI";
+import { TicketData } from "../interfaces/TicketData";
+import { UserData } from "../interfaces/UserData";
+import { retrieveUsers } from "../api/userAPI";
 
 const CreateTicket = () => {
   const [newTicket, setNewTicket] = useState<TicketData | undefined>({
     id: 0,
-    name: '',
-    description: '',
-    status: 'Todo',
+    name: "",
+    description: "",
+    status: "Todo",
     assignedUserId: 1,
-    assignedUser: null
+    assignedUser: null,
   });
 
   const navigate = useNavigate();
@@ -23,7 +23,7 @@ const CreateTicket = () => {
       const data = await retrieveUsers();
       setUsers(data);
     } catch (err) {
-      console.error('Failed to retrieve user info', err);
+      console.error("Failed to retrieve user info", err);
     }
   };
 
@@ -36,7 +36,7 @@ const CreateTicket = () => {
     if (newTicket) {
       const data = await createTicket(newTicket);
       console.log(data);
-      navigate('/');
+      navigate("/");
     }
   };
 
@@ -45,12 +45,16 @@ const CreateTicket = () => {
     setNewTicket((prev) => (prev ? { ...prev, [name]: value } : undefined));
   };
 
-  const handleTextChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleTextChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setNewTicket((prev) => (prev ? { ...prev, [name]: value } : undefined));
   };
 
-  const handleUserChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleUserChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setNewTicket((prev) => (prev ? { ...prev, [name]: value } : undefined));
   };
@@ -61,22 +65,26 @@ const CreateTicket = () => {
         <h1 className="text-xl font-semibold">Create Ticket</h1>
 
         <div className="form-control">
-          <label htmlFor="tName" className="label font-semibold">Ticket Name</label>
+          <label htmlFor="tName" className="label font-semibold">
+            Ticket Name
+          </label>
           <textarea
             id="tName"
             name="name"
-            value={newTicket?.name || ''}
+            value={newTicket?.name || ""}
             onChange={handleTextAreaChange}
             className="textarea textarea-bordered"
           />
         </div>
 
         <div className="form-control">
-          <label htmlFor="tStatus" className="label font-semibold">Ticket Status</label>
+          <label htmlFor="tStatus" className="label font-semibold">
+            Ticket Status
+          </label>
           <select
             name="status"
             id="tStatus"
-            value={newTicket?.status || ''}
+            value={newTicket?.status || ""}
             onChange={handleTextChange}
             className="select select-bordered"
           >
@@ -87,33 +95,50 @@ const CreateTicket = () => {
         </div>
 
         <div className="form-control">
-          <label htmlFor="tDescription" className="label font-semibold">Ticket Description</label>
+          <label htmlFor="tDescription" className="label font-semibold">
+            Ticket Description
+          </label>
           <textarea
             id="tDescription"
             name="description"
-            value={newTicket?.description || ''}
+            value={newTicket?.description || ""}
             onChange={handleTextAreaChange}
             className="textarea textarea-bordered"
           />
         </div>
 
         <div className="form-control">
-          <label htmlFor="tUserId" className="label font-semibold">Assign User</label>
+          <label htmlFor="tUserId" className="label font-semibold">
+            Assign User
+          </label>
           <select
             name="assignedUserId"
-            value={newTicket?.assignedUserId || ''}
+            value={newTicket?.assignedUserId || ""}
             onChange={handleUserChange}
             className="select select-bordered"
           >
-            {users?.map((user) => (
-              <option key={user.id} value={String(user.id)}>
-                {user.username}
-              </option>
-            ))}
+            {users ? (
+              users.map((user) => {
+                return (
+                  <option key={user.id} value={String(user.id)}>
+                    {user.username}
+                  </option>
+                );
+              })
+            ) : (
+              <textarea
+                id="tUserId"
+                name="assignedUserId"
+                value={newTicket?.assignedUserId || 0}
+                onChange={handleTextAreaChange}
+              />
+            )}
           </select>
         </div>
 
-        <button type="submit" className="btn btn-primary w-full">Submit</button>
+        <button type="submit" className="btn btn-primary w-full">
+          Submit
+        </button>
       </form>
     </div>
   );
